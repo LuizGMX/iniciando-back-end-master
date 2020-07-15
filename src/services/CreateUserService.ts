@@ -6,6 +6,7 @@ interface Request{
     email: string,
     password: string
 }
+
 class CreateUserService{
     public async execute({name,email,password}:Request): Promise<User>{
 
@@ -20,7 +21,7 @@ class CreateUserService{
         }
 
         const user = usersRepository.create({name,email,password});
-
+ 
         await usersRepository.save(user);
         return user;
     }    

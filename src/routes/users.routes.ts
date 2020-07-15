@@ -3,7 +3,8 @@ const usersRouter = Router();
 
 usersRouter.post('/', async (request, response) => {
     try {
-      return response.send();
+      const {name,email,password} = request.body;
+      
     } catch (err) {
         return response.status(400).json({ error: err.message })
     }
