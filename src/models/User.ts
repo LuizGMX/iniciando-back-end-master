@@ -1,12 +1,15 @@
 import {Entity, Column, PrimaryGeneratedColumn,CreateDateColumn,UpdateDateColumn} from 'typeorm'
 
 @Entity('users')
-class users{
+class User{
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
     @Column()
     name: string;
+
+    @Column()
+    email: string;
 
     @Column('timestamp with time zone')
     date: Date;
@@ -22,4 +25,4 @@ class users{
 
 }
 
-export default users
+export default User
