@@ -11,17 +11,14 @@ class User{
     @Column()
     email: string;
 
-    @Column('timestamp with time zone')
-    date: Date;
-
     @Column()
-    password:string;
+    password: string;
 
     @CreateDateColumn()
-    created_at:Date;
+    created_at: Date;
 
     @UpdateDateColumn()
-    updated_at:Date
+    updated_at: Date
 
 }
 
