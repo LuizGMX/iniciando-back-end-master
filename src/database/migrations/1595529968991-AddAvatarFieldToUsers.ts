@@ -12,7 +12,7 @@ export default class AddAvatarFieldToUsers1595529968991 implements MigrationInte
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropColumn('users','avatar')
+        await queryRunner.dropColumn('users','avatar');
     }
 
 }
